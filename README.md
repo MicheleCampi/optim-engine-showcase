@@ -91,10 +91,11 @@ OptimEngine is built as a 4-layer system where each layer has a single responsib
 
 | Solver | What it does |
 |---|---|
-| **`forecast_demand`** | Time-series forecasting (exponential smoothing, linear trend, seasonal) |
-| **`predict_strategy`** | Forecast → optimize → risk assessment → ranked recommendations |
-| **`optimize_workforce`** | Staff allocation across shifts and skills with stochastic demand |
-| **`analyze_capacity`** | Capacity utilization deep-dive with bottleneck and slack identification |
+| **`prescriptive_advise`** | Forecast → optimize → risk assessment → ranked recommendations |
+| **`forecast_basic`** | Time-series forecasting (exponential smoothing, linear trend, seasonal) — composed at Core Gateway |
+| **`risk_analysis`** | Multi-scenario risk evaluation with conservative/moderate/aggressive profiles — composed at Core Gateway |
+
+> **Tool inventory note**: The Layer 1 raw solver service exposes 9 tools directly (visible at the [live API root](https://optim-engine-production.up.railway.app)). 2 additional workflow-level tools (`forecast_basic`, `risk_analysis`) are composed at the Layer 2 Core Gateway for production use cases that combine multiple solvers. Total: 11 capabilities accessible via the full OptimEngine stack.
 
 ---
 
