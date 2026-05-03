@@ -5,6 +5,7 @@
 11 solvers covering scheduling, routing, packing, risk-aware planning, and prescriptive intelligence. Built on Google OR-Tools CP-SAT v9.0.0. Live in production with REST API + dual-stack MCP interfaces. Designed as decision-grade infrastructure for AI-native operations.
 
 🌐 **Live API**: [optim-engine-production.up.railway.app](https://optim-engine-production.up.railway.app)
+📊 **Live observability**: [public Grafana dashboard](https://optimengine.grafana.net/public-dashboards/21137ba340fc4b6e917a4b108db3e109) — solver invocations, status mix, p95 latency (24h rolling)
 ✍️ **Technical writing**: [michelecampi.github.io](https://michelecampi.github.io)
 👤 **Author**: [Michele Campi](https://github.com/MicheleCampi) — Operations Intelligence Engineer
 
@@ -119,6 +120,8 @@ Tested on realistic mid-market scenarios:
 - **Sensitivity analysis**: 12 parameters × 5 perturbation levels → elasticity scores in **<500ms**
 
 These are not marketing numbers. They're solver runtimes on instances with the structure mid-market manufacturers actually deal with weekly. Detailed case studies are published on [the blog](https://michelecampi.github.io).
+
+Real-time production metrics are available via the [public Grafana dashboard](https://optimengine.grafana.net/public-dashboards/21137ba340fc4b6e917a4b108db3e109) — read-only, no login required, refreshes every 60 seconds.
 
 ---
 
